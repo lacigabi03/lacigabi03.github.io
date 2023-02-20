@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- JS-re való hivatkozá -->
+    <script src="/13_JS_HTML_DOM/alap.js"></script>
+
+    <title>|--- Filmek ---|</title>
+    
+</head>
+<body>
+
+    <table id="tablazat"></table>
+
+    <script>
+
+
+            console.log(filmek)
+
+            for (const elem of filmek)
+            {
+                var tr = document.createElement("tr")
+                document.getElementById("tablazat").appendChild(tr)
+
+                var td = document.createElement("td")
+                tr.appendChild(td)
+                td.innerHTML = elem.Title
+
+                var td2 = document.createElement("td")
+                tr.appendChild(td2)
+
+                var kep = document.createElement("img")
+                kep.setAttribute("src" , elem.Images[0])
+                td2.appendChild(kep)
+                kep.style.width = "500px"
+
+                var td3 = document.createElement("td3")
+                tr.appendChild(td3)
+                td.innerHTML = elem.Writer
+
+            }
+
+    </script>
+
+
+
+</body>
+</html>
